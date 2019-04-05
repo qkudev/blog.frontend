@@ -1,0 +1,20 @@
+// colors
+$white: #FFFFFF;
+$black: #060606;
+$primary: #F00000;
+$primary-darken: #4e1f1f;
+$primary-darken-10: darken($primary, 10%);
+$primary-darken-20: darken($primary, 20%);
+$link-color: #0088FF;
+
+$body-color: #393749;
+$body-bg-color: $white;
+
+// fonts
+$font-family-base: "OpenSans-Light", serif;
+$font-size-base: 1rem;
+$font-style-base: normal;
+$font-weight-base: 400;
+$line-height-base: 1.5rem;
+
+$body-min-width: 260px;

@@ -1,0 +1,21 @@
+// Responsive utils: xs, sm, md, lg, xl;
+$xs-max-width: 575px;
+
+$sm-min-width: 576px;
+$sm-max-width: 767px;
+
+$md-min-width: 768px;
+$md-max-width: 991px;
+
+$lg-min-width: 992px;
+$lg-max-width: 1199px;
+
+$xl-min-width: 1200px;
+
+$breakpoints: (
+  xs: 0px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);

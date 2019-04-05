@@ -1,0 +1,93 @@
+@import 'variables';
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  font-style: normal;
+  font-weight: 400;
+  //noinspection CssUnknownTarget
+  src: url('/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: OpenSans-Light;
+  font-style: normal;
+  font-weight: 200;
+  //noinspection CssUnknownTarget
+  src: url('/fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: OpenSans-LightItalic;
+  font-style: normal;
+  font-weight: 200;
+  //noinspection CssUnknownTarget
+  src: url('/fonts/OpenSans-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: OpenSans-LightItalic;
+  font-style: normal;
+  font-weight: 200;
+  //noinspection CssUnknownTarget
+  src: url('/fonts/OpenSans-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: OpenSans-Italic;
+  font-style: normal;
+  font-weight: 400;
+  //noinspection CssUnknownTarget
+  src: url('/fonts/OpenSans-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: 700;
+  //noinspection CssUnknownTarget
+  src: url('/fonts/OpenSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: OpenSans-BoldItalic;
+  font-style: normal;
+  font-weight: 700;
+  //noinspection CssUnknownTarget
+  src: url('/fonts/OpenSans-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: OpenSans-SemiBold;
+  font-style: normal;
+  font-weight: 500;
+  //noinspection CssUnknownTarget
+  src: url('/fonts/OpenSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: OpenSans-LightItalic;
+  font-style: normal;
+  font-weight: 200;
+  //noinspection CssUnknownTarget
+  src: url('/fonts/OpenSans-SemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: OpenSans-ExtraBold;
+  font-style: normal;
+  font-weight: 800;
+  //noinspection CssUnknownTarget
+  src: url('/fonts/OpenSans-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: OpenSans-ExtraBoldItalic;
+  font-style: normal;
+  font-weight: 800;
+  //noinspection CssUnknownTarget
+  src: url('/fonts/OpenSans-ExtraBoldItalic.ttf') format('truetype');
+}
+
+.display-1 {
+  font-size: 12rem;
+}
