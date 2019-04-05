@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Matches with snapshot 1`] = `
+<div>
+  <div
+    className="layout header"
+    id="app-header"
+  >
+    <a
+      href="/"
+      id="header-link"
+      onClick={[Function]}
+    >
+      Show me them all
+    </a>
+  </div>
+</div>
+`;

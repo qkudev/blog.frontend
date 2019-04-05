@@ -34,7 +34,11 @@
   "devDependencies": {
     "@types/react-redux": "^7.0.6",
     "@types/react-router-dom": "^4.3.1",
+    "@types/react-test-renderer": "^16.8.1",
     "@types/redux-logger": "^3.0.7",
+    "node-sass": "^4.11.0",
+    "prettier": "^1.16.4",
+    "react-test-renderer": "^16.8.6",
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "tslint": "^5.15.0",
