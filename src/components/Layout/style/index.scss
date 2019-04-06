@@ -1,0 +1,18 @@
+@import '../../../style/variables';
+
+.layout {
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 0 1rem;
+
+  @media (min-width: 768px) {
+    padding: 0 3rem;
+  }
+
+  &.content {
+    position: absolute;
+    padding-top: 3rem;
+    background-color: $body-bg-color;
+    z-index: 1000;
+  }
+}

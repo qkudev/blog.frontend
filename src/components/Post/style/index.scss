@@ -1,0 +1,29 @@
+.post {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+
+  &-header {
+    a {
+      font-size: 2rem;
+    }
+  }
+
+  &-body {
+    line-height: 1.5em;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      //margin-top: 1.5em;
+      margin: 0.5em 0;
+      line-height: 1.25em;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+}

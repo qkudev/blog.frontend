@@ -1,2 +1,6 @@
 export { default as App } from './App'
 export { default as Header } from './Header'
+export { default as Spinner } from './Spinner'
+export { default as Layout } from './Layout'
+export { default as Post } from './Post'
+export { default as Page } from './Page'
