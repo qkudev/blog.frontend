@@ -1,26 +1,43 @@
 {
-  "name": "blog",
+  "name": "blog.frontend",
   "version": "0.1.0",
+  "description": "Blog frontend",
+  "homepage": "https://github.com/qkudev/blog.frontend",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qkudev/blog.frontend"
+  },
   "author": {
+    "url": "https://qkudev.me",
     "name": "qkudev",
     "email": "qkud.ev@gmail.com"
   },
-  "description": "Blog client",
-  "readme": "README.md",
   "keywords": [
     "react",
+    "redux",
     "typescript",
-    "blog"
+    "blog",
+    "JSON API"
   ],
+  "readme": "README.md",
+  "main": "src/index.tsx",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@types/jest": "24.0.11",
     "@types/node": "11.13.0",
     "@types/react": "16.8.12",
     "@types/react-dom": "16.8.3",
+    "axios": "^0.18.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-infinite-scroller": "^1.2.4",
     "react-markdown": "^4.0.6",
     "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.0",
@@ -29,12 +46,6 @@
     "redux-thunk": "^2.3.0",
     "typescript": "3.4.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -42,6 +53,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/react-infinite-scroller": "^1.2.1",
     "@types/react-redux": "^7.0.6",
     "@types/react-router-dom": "^4.3.1",
     "@types/react-test-renderer": "^16.8.1",

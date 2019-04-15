@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components::PostList should match snapshot with fail state 1`] = `
+<h1
+  style={
+    Object {
+      "textAlign": "center",
+    }
+  }
+>
+  Failed to fetch posts :(
+</h1>
+`;
+
+exports[`Components::PostList should match snapshot with loading state 1`] = `<div />`;
+
+exports[`Components::PostList should match snapshot with success state 1`] = `
+<div>
+  <div
+    className="post"
+  >
+    <div
+      className="post-body"
+    >
+      <p>
+        Some text
+      </p>
+    </div>
+  </div>
+</div>
+`;
