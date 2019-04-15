@@ -2,7 +2,7 @@
   "name": "blog.frontend",
   "version": "0.1.0",
   "description": "Blog frontend",
-  "homepage": "https://github.com/qkudev/blog.frontend",
+  "homepage": "https://qkudev.me",
   "repository": {
     "type": "git",
     "url": "https://github.com/qkudev/blog.frontend"
@@ -64,6 +64,7 @@
     "react-test-renderer": "^16.8.6",
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
+    "serve": "^11.0.0",
     "tslint": "^5.15.0",
     "tslint-config-standard": "^8.0.1"
   },
