@@ -3,52 +3,59 @@ import { Actions } from '../index'
 
 const testPosts: IPost[] = [
   {
-    id: 'q1w2e3r4t5y6',
-    body: '# Testing Post',
-    createdAt: '2019-04-13T13:45:33.529Z',
-    updatedAt: '2019-04-13T13:45:33.529Z'
+    _id: 'qwerty',
+    body: 'Some text',
+    updatedAt: '2019-04-14T23:41:36.340Z',
+    createdAt: '2019-04-14T23:41:36.340Z',
+    __v: 0
   }
 ]
 
+const testPagination: Pagination = {
+  page: 1,
+  limit: 10,
+  total: 0,
+  pages: 1
+}
+
 const testError = 'TestError'
 
-describe('Posts:reducer', function() {
+describe('State::Posts::Reducer', function() {
   it('should be equal to initial state', function() {
     const initState = Posts.reducer()
     expect(initState).toEqual(Posts.initState)
   })
-  it('should reduce actions', function() {
+
+  it('should reducer get posts begin action', function() {
     const getPostsBegin = Actions.getPostsBegin()
-    const getPostsSuccess = Actions.getPostsSuccess(testPosts)
-    const getPostsFail = Actions.getPostsFail(testError)
+    const afterPostsBegin = Posts.reducer(undefined, getPostsBegin)
 
-    const initState = Posts.reducer()
-    expect(initState).toEqual(Posts.initState)
-
-    const afterGetPostsBegin = Posts.reducer(initState, getPostsBegin)
-    expect(afterGetPostsBegin).toEqual({
-      ...initState,
-      loading: true
+    expect(afterPostsBegin).toEqual({
+      ...Posts.initState,
+      loading: true,
+      error: undefined
     })
+  })
 
-    const afterGetPostsSuccess = Posts.reducer(
-      afterGetPostsBegin,
-      getPostsSuccess
-    )
+  it('should reduce get posts success action', function() {
+    const getPostsSuccess = Actions.getPostsSuccess(testPosts, testPagination)
+
+    const afterGetPostsSuccess = Posts.reducer(undefined, getPostsSuccess)
     expect(afterGetPostsSuccess).toEqual({
-      ...afterGetPostsBegin,
+      ...Posts.initState,
       loading: false,
-      byId: { q1w2e3r4t5y6: testPosts[0] },
-      allIds: ['q1w2e3r4t5y6'],
-      pagination: {
-        page: 2,
-        limit: 10
-      }
+      byId: { qwerty: testPosts[0] },
+      allIds: ['qwerty'],
+      pagination: testPagination
     })
+  })
 
-    const afterGetPostsFail = Posts.reducer(afterGetPostsBegin, getPostsFail)
-    expect(afterGetPostsFail).toEqual({
-      ...afterGetPostsBegin,
+  it('should reduce get posts fail action', function() {
+    const getPostsFail = Actions.getPostsFail(testError)
+    const afterPostsFail = Posts.reducer(undefined, getPostsFail)
+
+    expect(afterPostsFail).toEqual({
+      ...Posts.initState,
       loading: false,
       error: testError
     })

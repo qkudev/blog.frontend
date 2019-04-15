@@ -3,21 +3,14 @@ import { Action } from './actions'
 export interface IState extends LoadableState {
   byId: { [id: string]: IPost }
   allIds: string[]
-  pagination: {
-    page: number
-    limit: number
-  }
+  pagination?: Pagination
 }
 
 export const initState: IState = {
   loading: false,
   error: undefined,
   byId: {},
-  allIds: [],
-  pagination: {
-    page: 1,
-    limit: 10
-  }
+  allIds: []
 }
 
 const initAction: InitAction = {
@@ -35,8 +28,8 @@ export function reducer(
     case 'POSTS_GET_SUCCESS': {
       let byId = { ...state.byId }
       const newIds = action.payload.posts.map(post => {
-        byId[post.id] = post
-        return post.id
+        byId[post._id] = post
+        return post._id
       })
       return {
         ...state,
@@ -44,10 +37,7 @@ export function reducer(
         error: undefined,
         byId,
         allIds: [...state.allIds, ...newIds],
-        pagination: {
-          page: state.pagination.page + 1,
-          limit: state.pagination.limit
-        }
+        pagination: action.payload.pagination
       }
     }
     case 'POSTS_GET_FAIL':

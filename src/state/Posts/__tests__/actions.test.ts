@@ -2,33 +2,52 @@ import { Actions } from '../index'
 
 const testPosts: IPost[] = [
   {
-    id: 'q1w2e3r4t5y6',
-    body: '# Testing Post',
-    createdAt: '2019-04-13T13:45:33.529Z',
-    updatedAt: '2019-04-13T13:45:33.529Z'
+    _id: 'qwerty',
+    body: 'Some text',
+    updatedAt: '2019-04-14T23:41:36.340Z',
+    createdAt: '2019-04-14T23:41:36.340Z',
+    __v: 0
   }
 ]
 
-describe('Posts:Actions', function() {
-  it('should create posts actions', function() {
+const testPagination: Pagination = {
+  page: 1,
+  limit: 10,
+  total: 0,
+  pages: 1
+}
+
+const testError = 'TestError'
+
+describe('State::Posts::Actions', function() {
+  it('should create get posts begin action', function() {
     const getPostsBegin = Actions.getPostsBegin()
-    const getPostsSuccess = Actions.getPostsSuccess(testPosts)
-    const getPostsFail = Actions.getPostsFail('TestingError')
 
     expect(getPostsBegin).toEqual({
       type: 'POSTS_GET_BEGIN',
       payload: undefined
     })
+  })
+
+  it('should create get posts success action', function() {
+    const getPostsSuccess = Actions.getPostsSuccess(testPosts, testPagination)
+
     expect(getPostsSuccess).toEqual({
       type: 'POSTS_GET_SUCCESS',
       payload: {
-        posts: testPosts
+        posts: testPosts,
+        pagination: testPagination
       }
     })
+  })
+
+  it('should create get posts fail action', function() {
+    const getPostsFail = Actions.getPostsFail(testError)
+
     expect(getPostsFail).toEqual({
       type: 'POSTS_GET_FAIL',
       payload: {
-        error: 'TestingError'
+        error: testError
       }
     })
   })
