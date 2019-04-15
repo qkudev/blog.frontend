@@ -1,14 +1,11 @@
 import * as React from 'react'
-import { Header } from '../index'
+import { Page, Layout } from '../index'
+import { Routes } from '../../pages'
 import './style'
 
 class App extends React.Component {
   render() {
-    return (
-      <div>
-        <Header />
-      </div>
-    )
+    return <Routes />
   }
 }
 

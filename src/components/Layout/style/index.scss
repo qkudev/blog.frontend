@@ -1,7 +1,6 @@
 @import '../../../style/variables';
 
 .layout {
-  min-height: 100vh;
   min-width: 100vw;
   padding: 0 1rem;
 
@@ -12,6 +11,7 @@
   &.content {
     position: absolute;
     padding-top: 3rem;
+    padding-bottom: 3rem;
     background-color: $body-bg-color;
     z-index: 1000;
   }

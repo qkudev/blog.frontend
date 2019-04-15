@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component:Post Matches with snapshot 1`] = `
+<div
+  className="post"
+>
+  <div
+    className="post-body"
+  >
+    <p>
+      Some text
+    </p>
+  </div>
+</div>
+`;

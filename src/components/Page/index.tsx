@@ -7,7 +7,7 @@ interface Props {
 }
 
 function Page({ className, children }: Props) {
-  return <div className={`page ${className}`}>{children}</div>
+  return <div className={`page ${className || ''}`}>{children}</div>
 }
 
 export default Page
