@@ -11,5 +11,10 @@ exports[`Component:Post Matches with snapshot 1`] = `
       Some text
     </p>
   </div>
+  <div
+    className="post-date"
+  >
+    2019/04/15, 06:41
+  </div>
 </div>
 `;

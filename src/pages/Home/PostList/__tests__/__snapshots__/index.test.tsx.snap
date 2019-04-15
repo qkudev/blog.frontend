@@ -26,6 +26,11 @@ exports[`Components::PostList should match snapshot with success state 1`] = `
         Some text
       </p>
     </div>
+    <div
+      className="post-date"
+    >
+      2019/04/15, 06:41
+    </div>
   </div>
 </div>
 `;

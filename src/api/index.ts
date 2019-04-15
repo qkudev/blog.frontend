@@ -12,13 +12,9 @@ export async function getPosts() {
   store.dispatch(Actions.getPostsBegin())
 
   try {
-    const response = await client.get('posts', {
-      params: pagination
-        ? { page: pagination.page + 1, limit: pagination.limit }
-        : undefined
+    const { data } = await client.get('posts', {
+      params: { page: (pagination && pagination.page) || undefined }
     })
-
-    const data = response.data as PaginatedResponse<IPost>
     store.dispatch(Actions.getPostsSuccess(data.docs, data.pagination))
   } catch (e) {
     store.dispatch(Actions.getPostsFail(e))

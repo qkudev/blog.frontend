@@ -1,13 +1,19 @@
 import * as React from 'react'
 import Markdown from 'react-markdown'
+import moment from 'moment'
 import './style'
 
-interface Props extends IPost {}
+type Props = IPost
 
-function Post({ body }: Props) {
+function date(date: string) {
+  return moment(date).format('YYYY/MM/DD, hh:mm')
+}
+
+function Post({ body, createdAt }: Props) {
   return (
     <div className='post'>
       <Markdown className='post-body' source={body} />
+      <div className='post-date'>{date(createdAt)}</div>
     </div>
   )
 }
