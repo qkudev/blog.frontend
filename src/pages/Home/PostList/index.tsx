@@ -3,7 +3,7 @@ import InfiniteScroller from 'react-infinite-scroller'
 import { connect } from 'react-redux'
 import * as State from '../../../state'
 import { Post, Spinner } from '../../../components'
-import * as API from '../../../api'
+import * as API from '../../../api/gql'
 
 type Props = State.Posts.IState
 
